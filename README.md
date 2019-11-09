@@ -9,4 +9,4 @@ The aim of this project is to train a neural network to predict a Twitter user's
 * Looking at if/how "filter bubbles" develop by analyzing user's social graph through the network
 
 ## Structure and Modules
-### 1. 
+
