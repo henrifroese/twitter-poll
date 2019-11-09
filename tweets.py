@@ -20,13 +20,14 @@ import matplotlib.pyplot
 import keyfile
 
 
-def mainsearch(usernames):
+def mainsearch(usernames, my_consumer_key = keyfile.consumer_key, my_consumer_secret = keyfile.consumer_secret,
+              my_access_token = keyfile.access_token, my_access_token_secret = keyfile.access_token_secret):
 
     ts = TwitterSearch(
-        consumer_key = keyfile.consumer_key,
-        consumer_secret = keyfile.consumer_secret,
-        access_token = keyfile.access_token,
-        access_token_secret = keyfile.access_token_secret
+        consumer_key = my_consumer_key,
+        consumer_secret = my_consumer_secret,
+        access_token = my_access_token,
+        access_token_secret = my_access_token_secret
      )
 
     tokens_all_users = list()
@@ -65,7 +66,8 @@ def mainsearch(usernames):
     return tokens_all_users  # list of lists (each list containing tokens of one user)
 
 
-def singlesearch(username):
+def singlesearch(username, my_consumer_key = keyfile.consumer_key, my_consumer_secret = keyfile.consumer_secret,
+              my_access_token = keyfile.access_token, my_access_token_secret = keyfile.access_token_secret):
 
     ts = TwitterSearch(
         consumer_key = keyfile.consumer_key,
@@ -104,14 +106,18 @@ def singlesearch(username):
     return tokens_user  #  list containing user's tokens
 
 
+def save_tokens(filename, tokens_several_users):
+    with open(filename, 'w') as f:
+        for usertokens in tokens_several_users:
+            f.write("%s\n" % ' '.join(usertokens))
 
-def predict_party(twitter_username, model, vocab):
-  user_tokens = singlesearch(twitter_username)
-  user_tokens = [token for token in user_tokens if token in vocab]
-  user_tokens = ' '.join(user_tokens)
-  return user_tokens
-print(predict_party('realdonaldtrump', None, ['But', 'the', 'Witch', 'hunt']))
 
+def get_and_save_users_list(filename, list_of_usernames, my_consumer_key = keyfile.consumer_key, 
+                            my_consumer_secret = keyfile.consumer_secret, 
+                            my_access_token = keyfile.access_token, my_access_token_secret = keyfile.access_token_secret):
+    tokens = mainsearch(usernames, my_consumer_key, my_consumer_secret, my_access_token, my_access_token_secret)
+    save_tokens(filename, tokens)
+    
 
 
 '''
