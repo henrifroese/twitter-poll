@@ -1,0 +1,29 @@
+model('freq', 3000, 0.2, 0.1, 1000);
+model('freq', 3000, 0.2, 0.01, 1000); Train: 0.947, Test: 0.748; loss functions diverge at ~ 700 epochs
+encoding mode: tfidf hidden nodes: 3000 dropout rate: 0.2 learning rate: 0.01 epochs: 1000 Train: 1.0 Test: 0.8130841255187988
+encoding mode: tfidf hidden nodes: 3000 dropout rate: 0.0 learning rate: 0.01 epochs: 10 Train: 1.0 Test: 0.7289719581604004
+encoding mode: tfidf hidden nodes: 3000 dropout rate: 0.0 learning rate: 0.01 epochs: 10 Train: 1.0 Test: 0.7476635575294495
+encoding mode: binary hidden nodes: 3000 dropout rate: 0.2 learning rate: 0.01 epochs: 10 Train: 1.0 Test: 0.8691588640213013
+encoding mode: count hidden nodes: 3000 dropout rate: 0.2 learning rate: 0.01 epochs: 10 Train: 1.0 Test: 0.8598130941390991
+encoding mode: count hidden nodes: 3000 dropout rate: 0.2 learning rate: 0.0001 epochs: 10 Train: 0.8361111283302307 Test: 0.644859790802002
+encoding mode: count hidden nodes: 3000 dropout rate: 0.2 learning rate: 0.001 epochs: 10 Train: 1.0 Test: 0.8504672646522522
+encoding mode: binary hidden nodes: 3000 dropout rate: 0.2 learning rate: 0.01 epochs: 10 Train: 1.0 Test: 0.84112149477005
+encoding mode: freq hidden nodes: 3000 dropout rate: 0.2 learning rate: 0.01 epochs: 10 Train: 0.24166665971279144 Test: 0.2429906576871872
+encoding mode: freq hidden nodes: 3000 dropout rate: 0.2 learning rate: 0.01 epochs: 100 Train: 0.18333333730697632 Test: 0.21495327353477478
+encoding mode: freq hidden nodes: 3000 dropout rate: 0.2 learning rate: 0.01 epochs: 1000 Train: 0.9611111283302307 Test: 0.7757009267807007
+encoding mode: freq hidden nodes: 3000 dropout rate: 0.5 learning rate: 0.01 epochs: 1000 Train: 0.9027777910232544 Test: 0.6542056202888489
+encoding mode: tfidf hidden nodes: 2000 dropout rate: 0.2 learning rate: 0.01 epochs: 100 Train: 1.0 Test: 0.8504672646522522
+encoding mode: binary hidden nodes: 5000 dropout rate: 0.2 learning rate: 0.01 epochs: 100 Train: 1.0 Test: 0.8971962332725525 //BINARY ENCODING RUNS: l_rate 0.01 better than 0.1; dropout rate 0.0 to 0.3; 
+encoding mode: binary hidden nodes: 5000 dropout rate: 0.2 learning rate: 0.1 epochs: 5 Train: 1.0 Test: 0.7943925261497498
+encoding mode: binary hidden nodes: 5000 dropout rate: 0.0 learning rate: 0.01 epochs: 10 Train: 1.0 Test: 0.8598130941390991
+encoding mode: binary hidden nodes: 5000 dropout rate: 0.0 learning rate: 0.001 epochs: 30 Train: 1.0 Test: 0.8504672646522522
+encoding mode: binary hidden nodes: 5000 dropout rate: 0.3 learning rate: 0.001 epochs: 50 Train: 1.0 Test: 0.84112149477005
+encoding mode: binary hidden nodes: 2000 dropout rate: 0.3 learning rate: 0.001 epochs: 50 Train: 1.0 Test: 0.8130841255187988
+encoding mode: binary hidden nodes: 2000 dropout rate: 0.5 learning rate: 0.001 epochs: 15 Train: 0.9972222447395325 Test: 0.7383177280426025
+encoding mode: binary hidden nodes: 2000 dropout rate: 0.5 learning rate: 0.001 epochs: 50 Train: 1.0 Test: 0.8691588640213013
+
+
+
+24-: 
+encoding mode: freq hidden nodes: 5000 dropout rate: 0.1 learning rate: 0.001 epochs: 800 Train: 0.9388889074325562 Test: 0.7757009267807007
+encoding mode: freq hidden nodes: 5000 dropout rate: 0.5 learning rate: 0.01 epochs: 800 Train: 0.9555555582046509 Test: 0.8317757248878479
