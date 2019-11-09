@@ -8,4 +8,5 @@ The aim of this project is to train a neural network to predict a Twitter user's
 * Classifying news articles by predicting the political affiliation of those who retweet and like them
 * Looking at if/how "filter bubbles" develop by analyzing user's social graph through the network
 
-### Structure and Modules
+## Structure and Modules
+### 1. 
